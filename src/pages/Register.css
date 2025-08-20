@@ -15,7 +15,9 @@
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   width: 350px;
+  max-width: 100%;   /* 📱 mobile ke liye shrink hoga */
   text-align: center;
+  box-sizing: border-box;
 }
 
 .register-card h2 {
@@ -42,8 +44,8 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 15px;
-  width: 100%; /* Yeh line full width ke liye */
-  box-sizing: border-box; /* Yeh padding/width ka proper calculation ke liye */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .register-form button {
@@ -74,6 +76,7 @@
 .login-link a:hover {
   text-decoration: underline;
 }
+
 .role-options {
   display: flex;
   gap: 20px;
@@ -101,6 +104,37 @@
 .role-btn.selected {
   background-color: #638d62;
   color: #fff;
-  /* border-color: #007bff; */
 }
 
+/* 📱 Responsive Styles */
+@media (max-width: 600px) {
+  .register-page {
+    padding: 20px 10px;
+    padding-top: 40px;
+  }
+
+  .register-card {
+    width: 100%;   /* full width card */
+    padding: 20px;
+  }
+
+  .register-card h2 {
+    font-size: 20px;
+  }
+
+  .register-form input,
+  .register-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .role-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .role-btn {
+    width: 83%;   /* buttons full width ho jayenge */
+    text-align: center;
+  }
+}

@@ -1,10 +1,11 @@
-// src/components/Navbar.js
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const userType = localStorage.getItem("userType");
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
@@ -14,32 +15,42 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  // Dashboard path decide based on userType
   const dashboardPath = userType === "seller" ? "/seller" : "/user";
   const bookingPath = userType === "seller" ? "/sellerbooking" : "/app";
 
   return (
     <nav className="navbar">
       <div className="navbar-brand">🏨 HotelBook</div>
-      <div className="navbar-links">
-        <Link to="/">Home</Link>
-        
+
+      {/* Hamburger for mobile */}
+      <div
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Links */}
+      <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
 
         {isLoggedIn ? (
           <>
-            <Link to={dashboardPath}>Dashboard</Link>
-            <Link to={bookingPath}>Booking</Link>
-            <Link to="/" onClick={handleLogout}>Logout</Link>
+            <Link to={dashboardPath} onClick={() => setMenuOpen(false)}>Dashboard</Link>
+            <Link to={bookingPath} onClick={() => setMenuOpen(false)}>Booking</Link>
+            <Link to="/" onClick={() => { handleLogout(); setMenuOpen(false); }}>Logout</Link>
           </>
         ) : (
           <>
-            <Link to="/app">Booking</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <Link to="/app" onClick={() => setMenuOpen(false)}>Booking</Link>
+            <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
+            <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link>
           </>
         )}
 
-        <Link to="/contact">Contact Us</Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
       </div>
     </nav>
   );

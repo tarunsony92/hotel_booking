@@ -99,3 +99,46 @@
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .user-card {
+    padding: 1.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .user-info {
+    flex-direction: column; /* info-box stack ho jayenge */
+  }
+
+  .user-actions {
+    flex-direction: column; /* buttons ek ke niche ek */
+  }
+
+  .primary-btn,
+  .logout-btn {
+    width: 100%; /* buttons full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}

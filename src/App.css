@@ -16,6 +16,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap; /* mobile me buttons wrap ho jaye */
 }
 
 .primary-btn {
@@ -96,4 +97,32 @@
 .room-status {
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1200px) {
+  .room-grid {
+    grid-template-columns: repeat(6, 1fr); /* tablets/laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .room-grid {
+    grid-template-columns: repeat(3, 1fr); /* tablets */
+  }
+  .page-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-grid {
+    grid-template-columns: repeat(2, 1fr); /* small mobiles */
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .primary-btn, .reset-btn {
+    width: 100%; /* mobile buttons full width */
+  }
 }

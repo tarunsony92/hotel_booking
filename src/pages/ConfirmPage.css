@@ -1,3 +1,4 @@
+/* ✅ Base styles (tumhare diye hue same) */
 .confirm-page {
   min-height: 100vh;
   display: flex;
@@ -51,7 +52,7 @@
 }
 
 .form-input {
-  width: 100%;
+  width: 90%;
   padding: 0.7rem;
   border-radius: 10px;
   border: none;
@@ -89,6 +90,7 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 .gender-options {
   display: flex;
   gap: 15px;
@@ -126,3 +128,52 @@
   background: #e6f0ff;
 }
 
+/* ✅ Mobile view adjustments */
+@media (max-width: 768px) {
+  .confirm-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+    max-width: 90%;
+  }
+
+  .confirm-heading {
+    font-size: 1.6rem;
+  }
+
+  .selected-rooms {
+    font-size: 1rem;
+  }
+
+  .form-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .confirm-button {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .gender-options {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .gender-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirm-heading {
+    font-size: 1.3rem;
+  }
+
+  .form-input,
+  .confirm-button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}

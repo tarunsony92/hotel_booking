@@ -20,3 +20,12 @@
   background-color: #007bff;
   color: white;
 }
+
+/* 📱 Responsive - scroll */
+@media (max-width: 768px) {
+  .bookings-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

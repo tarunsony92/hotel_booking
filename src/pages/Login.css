@@ -15,7 +15,9 @@
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   width: 350px;
+  max-width: 100%;   /* 📱 mobile ke liye shrink hoga */
   text-align: center;
+  box-sizing: border-box;
 }
 
 .login-card h2 {
@@ -42,10 +44,9 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 15px;
-  width: 100%; /* Yeh line full width ke liye */
-  box-sizing: border-box; /* Yeh padding/width ka proper calculation ke liye */
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .login-form button {
   background: #2196f3;
@@ -74,4 +75,31 @@
 
 .register-link a:hover {
   text-decoration: underline;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px 10px;
+    padding-top: 40px;
+  }
+
+  .login-card {
+    width: 100%;   /* full width card */
+    padding: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .register-link {
+    font-size: 13px;
+  }
 }

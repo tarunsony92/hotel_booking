@@ -20,22 +20,35 @@ const Register = () => {
   const [password, setPassword] = useState("");
 const handleRegister = async () => {
   try {
-    const res = await axios.post("https://hotel-backend-production-8070.up.railway.app/api/auth/register", {
-      full_name: fullName,
-      email,
-      password,
-      role,
-      location: role === "seller" ? location : null,
-    });
+    const res = await axios.post(
+      "https://hotel-backend-production-8070.up.railway.app/api/auth/register",
+      {
+        full_name: fullName,
+        email,
+        password,
+        role,
+        location: role === "seller" ? location : null,
+      }
+    );
+
     console.log("Response:", res.data); // ✅ check backend response
     alert(res.data.message);
-    localStorage.setItem("isLoggedIn", "true"); // login the user
-    navigate("/user"); // redirect
+
+    localStorage.setItem("isLoggedIn", "true"); // login status
+    localStorage.setItem("userRole", role);    // role bhi save karo
+
+    // ✅ Role-based redirect
+    if (role === "seller") {
+      navigate("/seller");
+    } else {
+      navigate("/user");
+    }
   } catch (err) {
     console.error("Registration error:", err.response || err);
     alert(err.response?.data?.error || "Registration failed");
   }
 };
+
 
 const handleFormSubmit = (e) => {
   e.preventDefault();     // ✅ stop form reload
