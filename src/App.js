@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const response = await axios.get("https://hotel-backend-production.up.railway.app/api/bookings");
+        const response = await axios.get("https://hotel-backend-production.up.railway.app/api/rooms");
         setRooms(response.data);
       } catch (err) {
         console.error("Failed to fetch rooms:", err);
@@ -56,7 +56,7 @@ function App() {
 
   const handleReset = async () => {
     try {
-      const res = await axios.get("https://hotel-backend-production-8070.up.railway.app/api/bookings");
+      const res = await axios.get("https://hotel-backend-production-8070.up.railway.app/api/rooms");
       setRooms(res.data);
       setSelectedRooms([]);
     } catch (error) {
