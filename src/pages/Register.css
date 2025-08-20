@@ -1,0 +1,106 @@
+/* src/pages/Register.css */
+
+.register-page {
+  background: linear-gradient(135deg, #e0f7fa, #fffde7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.register-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.register-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-form label {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+}
+
+.register-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%; /* Yeh line full width ke liye */
+  box-sizing: border-box; /* Yeh padding/width ka proper calculation ke liye */
+}
+
+.register-form button {
+  background: #2196f3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background: #388e3c;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+.role-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.role-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.role-btn input {
+  display: none;
+}
+
+.role-btn.selected {
+  background-color: #638d62;
+  color: #fff;
+  /* border-color: #007bff; */
+}
+

@@ -1,0 +1,36 @@
+/* src/IndexPage.css */
+.index-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #fffde7);
+  text-align: center;
+}
+
+.index-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.index-container p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.index-container button {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.index-container button:hover {
+  background-color: #005fa3;
+}

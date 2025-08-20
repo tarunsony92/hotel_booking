@@ -1,0 +1,77 @@
+/* src/pages/Login.css */
+
+.login-page {
+  background: linear-gradient(135deg, #e0f7fa, #fffde7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.login-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form label {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%; /* Yeh line full width ke liye */
+  box-sizing: border-box; /* Yeh padding/width ka proper calculation ke liye */
+}
+
+
+.login-form button {
+  background: #2196f3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #388e3c;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

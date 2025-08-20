@@ -1,0 +1,22 @@
+.seller-page {
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.bookings-table th,
+.bookings-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.bookings-table th {
+  background-color: #007bff;
+  color: white;
+}

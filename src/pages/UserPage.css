@@ -1,0 +1,101 @@
+.user-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+}
+
+.user-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.highlight {
+  color: #4a90e2;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-box {
+  background: #2b5d7163;
+  padding: 1rem;
+  flex: 1;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+}
+
+.tips-box {
+  background: #6b571668;
+  border-left: 5px solid #ffca2c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.user-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-btn {
+  flex: 1;
+  background: #4a90e2;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.primary-btn:hover {
+  background: #357abd;
+}
+
+.logout-btn {
+  flex: 1;
+  background: #d22528c9;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #d9363e;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
