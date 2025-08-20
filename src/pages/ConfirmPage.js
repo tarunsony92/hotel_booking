@@ -50,7 +50,7 @@ const ConfirmPage = ({ rooms, selectedRooms, setRooms, setSelectedRooms }) => {
     setSelectedRooms([]);
 
     try {
-      await axios.post("https://hotel-backend-production.up.railway.app/api/bookings/book", {
+      await axios.post("https://hotel-backend-production-8070.up.railway.app//api/bookings/book", {
         ...formData,
         // email: localStorage.getItem("userEmail"),
         selectedRooms,
