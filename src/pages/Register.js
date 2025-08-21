@@ -36,6 +36,7 @@ const handleRegister = async () => {
 
     localStorage.setItem("isLoggedIn", "true"); // login status
     localStorage.setItem("userRole", role);    // role bhi save karo
+    localStorage.setItem("userEmail", email); 
 
     // ✅ Role-based redirect
     if (role === "seller") {
